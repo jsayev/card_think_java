@@ -2,17 +2,14 @@ package think.java;
 
 class Game {
     public static void main(String[] args) {
-        int index = 0;
-        Card[] cards = new Card[52];
-        for (int suit = 0; suit <= 3; suit++) {
-            for (int rank = 1; rank <= 13; rank++) {
-                cards[index] = new Card(rank, suit);
-                index++;
-            }
-        }
-        Game game = new Game();
-        System.out.println(game.sequentialSearch(cards, new Card(11, 0)));
-        System.out.println(game.binarySearch(cards, new Card(11, 0)));
+        Deck deck = new Deck();
+        System.out.println("Shuffling \n");
+        deck.shuffle();
+        deck.print();
+        System.out.println("\nselection sorting \n");
+        deck.selectionSort();
+        deck.print();
+
     }
 
     int sequentialSearch(Card[] cards, Card target) {

@@ -1,8 +1,8 @@
 package think.java;
 
 class Card {
-    static final String[] suits = {"Clubs", "Diamonds", "Hearts", "Spade"};
-    static final String[] ranks = {null, "Ace", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+    static final String[] suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
+    static final String[] ranks = {null, "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
     private final int rank;
     private final int suit;
 
