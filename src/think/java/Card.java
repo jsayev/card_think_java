@@ -18,7 +18,13 @@ class Card {
         if (this.suit > that.suit) {
             return 1;
         }
-        return Integer.compare(this.rank, that.rank);
+        if (this.rank < that.rank) {
+            return -1;
+        }
+        if (this.rank > that.rank) {
+            return 1;
+        }
+        return 0;
     }
 
     public String toString() {
@@ -29,5 +35,7 @@ class Card {
         return this.rank == that.rank && this.suit == that.suit;
     }
 
-
+    int getRank() {
+        return rank;
+    }
 }
