@@ -1,6 +1,7 @@
 package think.java;
 
 import java.util.ArrayList;
+import java.util.List;
 
 class Pile {
     private final ArrayList<Card> cards;
@@ -10,7 +11,9 @@ class Pile {
     }
 
     Card popCard() {
-        return this.cards.removeFirst();
+        if (!this.cards.isEmpty())
+            return this.cards.removeFirst();
+        return null;
     }
 
     void addCard(Card card) {
@@ -25,5 +28,17 @@ class Pile {
         for (Card card : deck.getCards()) {
             this.cards.add(card);
         }
+    }
+
+    List<Card> draw4Cards() {
+        List<Card> cards = new ArrayList<>();
+        for (int i = 0; i <= 3; i++) {
+            cards.add(this.popCard());
+        }
+        return cards;
+    }
+
+    public ArrayList<Card> getCards() {
+        return cards;
     }
 }
