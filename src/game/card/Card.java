@@ -1,12 +1,12 @@
-package think.java;
+package game.card;
 
-class Card {
+public class Card {
     static final String[] suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
     static final String[] ranks = {null, "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
     private final int rank;
     private final int suit;
 
-    Card(int rank, int suit) {
+    public Card(int rank, int suit) {
         this.rank = rank;
         this.suit = suit;
     }
@@ -31,11 +31,15 @@ class Card {
         return ranks[this.rank] + " of " + suits[this.suit];
     }
 
-    boolean equals(Card that) {
+    public boolean equals(Card that) {
         return this.rank == that.rank && this.suit == that.suit;
     }
 
-    int getRank() {
+    public int getRank() {
         return rank;
+    }
+
+    public int getSuit() {
+        return suit;
     }
 }

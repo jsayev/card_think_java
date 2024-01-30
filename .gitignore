@@ -3,7 +3,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .idea/
-cardGame.iml
+card_game.iml
 
 ### Eclipse ###
 .apt_generated

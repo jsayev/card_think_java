@@ -1,4 +1,6 @@
-package think.java;
+package game.card.war;
+
+import game.card.Card;
 
 import java.util.Random;
 
@@ -61,7 +63,6 @@ class Deck {
         return merge(d1, d2);
     }
 
-    // todo to be implemented
     Deck mergeSort() {
         int len = this.cards.length;
         if (len < 2) {
@@ -72,10 +73,6 @@ class Deck {
         Deck d2 = this.createSubdeck(mid, len - 1);
         d1 = d1.mergeSort();
         d2 = d2.mergeSort();
-        System.out.println("d1\n");
-        d1.print();
-        System.out.println("\nd2\n");
-        d2.print();
         return merge(d1, d2);
     }
 
@@ -83,10 +80,10 @@ class Deck {
         return new Random().nextInt(low, high);
     }
 
-    private void swapCards(int i, int j) {
-        Card cardToSwap = this.cards[i];
-        this.cards[i] = this.cards[j];
-        this.cards[j] = cardToSwap;
+    void swapCards(int i, int j) {
+        Card cardToSwap = cards[i];
+        cards[i] = cards[j];
+        cards[j] = cardToSwap;
     }
 
     private int indexLowest(int low, int high) {
