@@ -29,9 +29,6 @@ class Conway {
     }
 
     private void mainloop() {
-        int count = 0;
-        while(count<10){
-            this.update();
-        }
+
     }
 }
